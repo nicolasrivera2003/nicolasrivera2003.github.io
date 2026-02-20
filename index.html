@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nicolás Rivera | GitHub Profiles</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nicolás Rivera | GitHub</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <div class="container">
-        <h1>Nicolás Rivera</h1>
-        <p>Select a GitHub profile:</p>
+  <main class="wrap">
+    <section class="panel">
+      <h1 class="name">Nicolás Rivera</h1>
+      <p class="tag">Select a GitHub profile</p>
 
-        <a class="button" href="https://github.com/TU_GITHUB_INSTITUCIONAL" target="_blank">
-            Institutional GitHub
+      <div class="row">
+        <a
+          class="btn neutral"
+          href="https://github.com/nicolasrivera25"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-hint="University projects & academic repositories"
+        >
+          Institutional
+          <span class="arrow" aria-hidden="true">↗</span>
+          <span class="hint" aria-hidden="true"></span>
         </a>
 
-        <a class="button secondary" href="https://github.com/TU_GITHUB_PERSONAL" target="_blank">
-            Personal GitHub
+        <a
+          class="btn orange"
+          href="https://github.com/nicolasrivera2003"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-hint="(NEW ACCOUNT) Personal builds, work projects & side projects"
+        >
+          Personal
+          <span class="arrow" aria-hidden="true">↗</span>
+          <span class="hint" aria-hidden="true"></span>
         </a>
-    </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll(".btn").forEach((btn) => {
+      const hint = btn.querySelector(".hint");
+      const text = btn.getAttribute("data-hint");
+      if (hint && text) hint.textContent = text;
+    });
+  </script>
 </body>
 </html>
